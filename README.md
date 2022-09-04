@@ -1,12 +1,14 @@
-# flask-api-bp
+# Flask-api-bp
 
 Kick start your flask api backend server
 
 ## Setup
 
-Install pipenv
+- Install python 3.9.11
 
-> https://pypi.org/project/pipenv/
+- Install pipenv
+
+- > https://pypi.org/project/pipenv/
 
 Run:: `make setup`
 
