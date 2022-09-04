@@ -10,3 +10,30 @@ backend_packages = [
   "pants.core",
   "pants.backend.plugin_development",
 ]
+
+[anonymous-telemetry]
+enabled = false
+
+[autoflake]
+args = [
+  "--in-place",
+  "--remove-all-unused-imports",
+]
+
+
+[python]
+enable_resolves = true
+interpreter_constraints = ["CPython==3.9.*"]
+lockfile_generator = "pex"
+tailor_pex_binary_targets = false
+
+
+[python.resolves]
+pants-plugins = "3rdparty/python/plugins.lock"
+python-default = "3rdparty/python/default.lock"
+
+[tailor]
+build_file_header = """# NOTE: this is an auto-generated file. Do NOT modify this file unless you have a reason
+"""
+
+ignore_paths = []

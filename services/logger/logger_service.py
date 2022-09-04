@@ -1,5 +1,6 @@
 import os
 from typing import Any
+
 from services.logger.internal.console_logger import ConsoleLogger
 
 
