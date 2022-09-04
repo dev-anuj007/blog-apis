@@ -1,8 +1,9 @@
-import os
-
 from flask import Flask, Blueprint
-from services.logger.internal.console_logger import ConsoleLogger
-print("my os ==", os.getenv("ENVIRONMENT"))
+from services.logger.logger_service import LoggerService
+
+# Loading logger services
+logger = LoggerService.get_logger()
+logger.info(message="Logger service is loaded !")
 
 app = Flask(__name__)
 blueprint = Blueprint('', __name__, url_prefix='')
