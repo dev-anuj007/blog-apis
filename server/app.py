@@ -1,6 +1,8 @@
+import os
+
 from flask import Flask, Blueprint
 from services.logger.internal.console_logger import ConsoleLogger
-
+print("my os ==", os.getenv("ENVIRONMENT"))
 
 app = Flask(__name__)
 blueprint = Blueprint('', __name__, url_prefix='')
