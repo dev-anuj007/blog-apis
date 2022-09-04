@@ -3,17 +3,17 @@ from abc import ABC, abstractmethod
 
 class Logger(ABC):
     @abstractmethod
-    def critical(self) -> None:
+    def critical(self, *, message: str) -> None:
         pass
 
     @abstractmethod
-    def error(self) -> None:
+    def error(self, *, message: str) -> None:
         pass
 
     @abstractmethod
-    def info(self) -> None:
+    def info(self, *, message: str) -> None:
         pass
 
     @abstractmethod
-    def warning(self) -> None:
+    def warning(self, *, message: str) -> None:
         pass
