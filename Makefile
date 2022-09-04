@@ -8,6 +8,12 @@ pants-lint:
 	./pants --pants-config-files=pants.toml --changed-since=origin/main lint
 runserver:
 	pipenv run gunicorn  'server.app:app' --reload
+setup:
+	pipenv --rm
+	pipenv --python 3.9.11
+	pipenv install --dev
+	pipenv install
+	pipenv verify
 test:
 	pipenv run pytest ${DIR}
 vulture:
