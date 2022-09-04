@@ -1,0 +1,12 @@
+[GLOBAL]
+pants_version = "2.12.1"
+
+backend_packages = [
+  "pants.backend.python",
+  "pants.backend.experimental.python.lint.autoflake",
+  "pants.backend.python.lint.black",
+  "pants.backend.python.lint.isort",
+  "pants.backend.python.typecheck.mypy",
+  "pants.core",
+  "pants.backend.plugin_development",
+]
