@@ -1,6 +1,6 @@
-# Flask-api-bp
+# Blog Apis
 
-Kick start your flask api backend server
+CRUD API with auth
 
 ## Setup
 
