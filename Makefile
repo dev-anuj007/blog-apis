@@ -10,7 +10,7 @@ runserver:
 	pipenv run gunicorn  'server.app:app' --reload
 setup:
 	pipenv --rm
-	pipenv --python 3.9.*
+	pipenv --python 3.9
 	pipenv install --dev
 	pipenv install
 	pipenv verify
