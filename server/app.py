@@ -7,8 +7,12 @@ from services.logger.logger_service import LoggerService
 logger = LoggerService.get_logger()
 logger.info(message="Logger service is loaded !")
 
-# Check for mypy error
+# Check for mypy config
 is_ok = os.system("pipenv run mypy --config-file mypy.ini services")
+assert not is_ok
+
+# Check for vulture config
+is_ok = os.system("pipenv run vulture")
 assert not is_ok
 
 app = Flask(__name__)

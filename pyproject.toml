@@ -1,0 +1,21 @@
+[tool.black]
+line-length = 120
+skip-magic-trailing-comma = true
+target-version = ['py39']
+
+[tool.isort]
+line_length = 120
+multi_line_output = 3
+profile = "black"
+py_version = "39"
+
+[tool.vulture]
+exclude = []
+ignore_decorators = []
+ignore_names = []
+min_confidence = 60
+paths = [
+    "server",
+    "services",
+]
+sort_by_size = true
